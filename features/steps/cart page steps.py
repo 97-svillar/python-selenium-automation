@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
+
 
 @then("Verify that “Your cart is empty” message is shown.")
 def verify_message_empty_cart(context):
@@ -10,6 +13,7 @@ def verify_message_empty_cart(context):
 @then("verify {item} was added to cart")
 def open_cart(context, item):
     context.driver.get('https://www.target.com/cart')
+
 
 @then('Verify cart has {amount} item(s)')
 def verify_cart_items(context, amount):
