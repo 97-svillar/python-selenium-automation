@@ -1,6 +1,6 @@
 # Created by sergiovillar at 6/19/25
 Feature: Cart tests
-
+#this is an edit
   Scenario: User clicks on the cart icon and verifies that “Your cart is empty” message is shown.
     Given open target main page
     When click on cart

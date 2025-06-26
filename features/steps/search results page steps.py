@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 
 
+# quick edit
 ADD_CART_BTN = (By.CSS_SELECTOR, "[id*='addToCartButtonOrTextIdFor']")
 SIDE_NAV_ADD_CART_BTN = (By.CSS_SELECTOR, "[data-test='content-wrapper'] button[id*='addToCartButtonOrTextIdFor']")
 SEARCH_RESULTS_TXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")

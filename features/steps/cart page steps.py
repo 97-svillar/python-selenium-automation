@@ -3,7 +3,7 @@ from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
-
+# sergio
 
 @then("Verify that “Your cart is empty” message is shown.")
 def verify_message_empty_cart(context):

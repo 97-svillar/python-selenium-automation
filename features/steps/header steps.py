@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 
+# sergio
+
 SEARCH_FIELD = (By.ID, 'search')
 SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
 CART_ICON = (By.CSS_SELECTOR, "div[data-test='@web/CartIcon'")

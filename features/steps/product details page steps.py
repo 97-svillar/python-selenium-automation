@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
 
+# sergio
 
 COLOR_OPTIONS = (By.CSS_SELECTOR, "li[class*='CarouselItem'] img")
 SELECTED_COLOR = (By.CSS_SELECTOR, "[data-test='@web/VariationComponent'] div")
