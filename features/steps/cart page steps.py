@@ -7,8 +7,8 @@ from time import sleep
 
 @then("Verify that “Your cart is empty” message is shown.")
 def verify_message_empty_cart(context):
-    context.driver.find_element(By.XPATH, "//h1[text()='Your cart is empty']")
-
+    # context.driver.find_element(By.XPATH, "//h1[text()='Your cart is empty']")
+    context.app.cart_page.verify_message_empty_cart()
 
 @then("verify {item} was added to cart")
 def open_cart(context, item):

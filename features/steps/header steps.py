@@ -14,15 +14,16 @@ HEADER_LINKS = (By.CSS_SELECTOR, "[data-test*='@web/GlobalHeader/UtilityHeader/'
 
 @when('Search for {search_word}')
 def search_product(context, search_word):
-    context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
-    context.driver.wait.until(EC.element_to_be_clickable(SEARCH_BTN)).click()
+    # context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
+    # context.driver.wait.until(EC.element_to_be_clickable(SEARCH_BTN)).click()
+    context.app.header.search_product()
 
 
 
 @when("click on cart")
 def click_cart(context):
-    context.driver.find_element(*CART_ICON).click()
-
+    # context.driver.find_element(*CART_ICON).click()
+    context.app.header.click_cart()
 
 @then('Verify header has {number} links')
 def verify_header_links(context, number):

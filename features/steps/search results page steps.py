@@ -12,8 +12,9 @@ SEARCH_RESULTS_TXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")
 
 @then('Verify search worked for {product}')
 def verify_search_results(context, product):
-    actual_text = context.driver.find_element(*SEARCH_RESULTS_TXT).text
-    assert product in actual_text, f"Error, expected {product} not in actual {actual_text}"
+    # actual_text = context.driver.find_element(*SEARCH_RESULTS_TXT).text
+    # assert product in actual_text, f"Error, expected {product} not in actual {actual_text}"
+    context.app.search_results_page.verify_search_results()
 
 
 @then('add {product} to the cart')
