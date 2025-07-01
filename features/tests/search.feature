@@ -9,7 +9,7 @@ Feature: Tests for Target Search
 #    Given Open target main page
 #    When Search for mug
 #    Then Verify search worked for mug
-#
+
 #  Scenario: User can search for coffee on Target
 #    Given Open target main page
 #    When Search for coffee

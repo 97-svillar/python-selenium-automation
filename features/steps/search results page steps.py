@@ -14,15 +14,14 @@ SEARCH_RESULTS_TXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")
 def verify_search_results(context, product):
     # actual_text = context.driver.find_element(*SEARCH_RESULTS_TXT).text
     # assert product in actual_text, f"Error, expected {product} not in actual {actual_text}"
-    context.app.search_results_page.verify_search_results()
+    context.app.search_results_page.verify_search_results(product)
 
 
 @then('add {product} to the cart')
 def add_to_cart(context, product):
-    sleep(10)
-    context.driver.find_element(*ADD_CART_BTN).click()
+    context.app.search_results_page.add_product_to_cart()
 
 
 @then('add {product} to cart on options menu')
 def add_to_cart(context, product):
-    context.driver.wait.until(EC.element_to_be_clickable(SIDE_NAV_ADD_CART_BTN)).click()
+    context.app.search_results_page.add_to_cart_options_menu()

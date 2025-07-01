@@ -5,6 +5,7 @@ Feature: Cart tests
     Given open target main page
     When click on cart
     Then Verify that “Your cart is empty” message is shown.
+    Then Verify cart page opened
 
 
   Scenario: User adds product to cart and verifies it's in the cart

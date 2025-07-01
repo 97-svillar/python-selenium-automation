@@ -6,16 +6,20 @@ from time import sleep
 # sergio
 
 @then("Verify that “Your cart is empty” message is shown.")
-def verify_message_empty_cart(context):
-    # context.driver.find_element(By.XPATH, "//h1[text()='Your cart is empty']")
-    context.app.cart_page.verify_message_empty_cart()
+def verify_cart_empty(context):
+    # context.driver.find_element(By.CSS_SELECTOR, "[data-test='boxEmptyMsg']")
+    context.app.cart_page.verify_cart_empty()
+
+@then("Verify cart page opened")
+def cart_opened(context):
+    context.app.cart_page.verify_cart_opened()
+
 
 @then("verify {item} was added to cart")
 def open_cart(context, item):
-    context.driver.get('https://www.target.com/cart')
+    context.app.cart_page.open_cart()
 
 
 @then('Verify cart has {amount} item(s)')
 def verify_cart_items(context, amount):
-    cart_summary = context.driver.find_element(By.XPATH, "//div[./span[contains(text(), 'subtotal')]]").text
-    assert f'{amount} item' in cart_summary, f"Expected {amount} items but got {cart_summary}"
+    context.app.cart_page.verify_cart_items(amount)
