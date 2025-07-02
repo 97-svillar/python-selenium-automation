@@ -23,20 +23,25 @@ def search_product(context, search_word):
 
 @when("click on cart")
 def click_cart(context):
-    # context.driver.find_element(*CART_ICON).click()
-    context.app.header.click_cart()
-
-@then('Verify header has {number} links')
-def verify_header_links(context, number):
-    print(type(number))
-    links = context.driver.find_elements(*HEADER_LINKS)
-    print(links)
-
-    # 6 == 6
-    assert len(links) == int(number), f'Expected {number} links but got {len(links)}'
+    context.driver.find_element(By.CSS_SELECTOR,"div[data-test='@web/CartIcon'" ).click()
 
 
-@when('selecting account and clicking sign in')
-def click_acct(context):
-    context.app.header.click_acct()
-    context.app.header.sign_in()
+# @when("click on cart")
+# def click_cart(context):
+#     # context.driver.find_element(*CART_ICON).click()
+#     context.app.header.click_cart()
+
+# @then('Verify header has {number} links')
+# def verify_header_links(context, number):
+#     print(type(number))
+#     links = context.driver.find_elements(*HEADER_LINKS)
+#     print(links)
+#
+#     # 6 == 6
+#     assert len(links) == int(number), f'Expected {number} links but got {len(links)}'
+#
+#
+# @when('selecting account and clicking sign in')
+# def click_acct(context):
+#     context.app.header.click_acct()
+#     context.app.header.sign_in()

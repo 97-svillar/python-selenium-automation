@@ -9,6 +9,11 @@ from pages.main_page import MainPage
 
 # sergio
 
-@given('Open target main page')
+@given("open target main page")
 def open_main(context):
-    context.app.main_page.open_main_page()
+    context.driver.get('https://www.target.com/')
+
+
+# @given('Open target main page')
+# def open_main(context):
+#     context.app.main_page.open_main_page()
