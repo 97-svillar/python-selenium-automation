@@ -8,7 +8,7 @@ from time import sleep
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()
 
-# Part 1
+# Part 1 of the homework
 
 # open the url
 driver.get(
