@@ -25,3 +25,13 @@ def add_to_cart(context, product):
 @then('add {product} to cart on options menu')
 def add_to_cart(context, product):
     context.app.search_results_page.add_to_cart_options_menu()
+
+
+@when("Hover favorites icon")
+def hover_fav_icon(context):
+    context.app.search_results_page.hover_fav_icon()
+
+
+@then("Favorites tooltip is shown")
+def verify_fav_tt_shown(context):
+    context.app.search_results_page.verify_fav_tt_shown()
